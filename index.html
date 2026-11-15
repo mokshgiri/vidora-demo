@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vidora – foreground service demo</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #07070f; color: #f1f0ff; }
+  main { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 22px; margin: 0 0 8px; }
+  p, li { line-height: 1.55; color: #c9c7e0; }
+  video { display: block; width: 100%; max-width: 360px; margin: 20px auto; border-radius: 16px; background: #000; }
+  a { color: #a78bfa; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Vidora: All Video Downloader – foreground service demo</h1>
+  <p>Package <code>com.vidora.videodownloader</code>. This recording shows how the app uses the
+     <code>FOREGROUND_SERVICE_DATA_SYNC</code> permission (Data sync → Network processing → Other:
+     user-initiated file download).</p>
+  <video src="foreground-service-demo.mp4" controls playsinline></video>
+  <ol>
+    <li>The user pastes a video link and taps <b>Download</b>, then confirms in the preview sheet.</li>
+    <li>The download starts and appears under “In progress”.</li>
+    <li>The user presses Home and leaves the app. The foreground service keeps the download running
+        and shows its progress, speed and a Cancel action in a notification.</li>
+    <li>When the download finishes the service stops and the notification changes to “Saved to Photos”.</li>
+  </ol>
+  <p>Direct file: <a href="foreground-service-demo.mp4">foreground-service-demo.mp4</a></p>
+</main>
+</body>
+</html>
